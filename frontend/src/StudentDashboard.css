@@ -1,0 +1,22 @@
+#reports {
+    border: 5px solid #c78a11;
+    margin: auto;
+    padding: 2px;
+}
+
+#navBar {
+    padding-top: 20px;
+}
+
+img {
+    width: 200px;
+}
+
+.card {
+    margin: 5px;
+}
+
+#intro {
+    text-align: center;
+    padding-bottom: 10px;
+}

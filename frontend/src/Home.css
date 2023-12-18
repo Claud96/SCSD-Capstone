@@ -1,0 +1,31 @@
+/* SCSD LOGO COLORS 
+
+    #FCB713
+
+    #E41937
+
+    #C78A11
+
+*/
+
+#navBar {
+    padding-top: 20px;
+}
+
+img {
+    width: 200px;
+}
+
+#bookLists {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.col-10 {
+    margin-bottom: 50px;
+}
+
+.ul,
+button {
+    margin-bottom: 2px;
+}

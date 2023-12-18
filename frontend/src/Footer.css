@@ -1,0 +1,26 @@
+/* SCSD LOGO COLORS 
+
+    #FCB713
+
+    #E41937
+
+    #C78A11
+
+*/
+
+/* edits the entire row for the footer */
+#footer {
+    color: #c78a11;
+    padding: 8px;
+    margin-top: 2px;
+    background-color: rgb(6, 5, 5);
+}
+
+/* edits links in footer col-2*/
+a {
+    color: rgba(239, 229, 229, 0.883);
+}
+
+#footerlinks {
+    padding-top: 30px;
+}

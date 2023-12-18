@@ -1,0 +1,28 @@
+form {
+    border: 2px solid #e41937;
+    background-color: rgb(236, 228, 219);
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.col {
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#review {
+    padding-left: 5px;
+    padding-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.btn {
+    color: black;
+}
