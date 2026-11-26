@@ -3,7 +3,13 @@ import Sequelize from "sequelize";
 // import SessionsModel from "./Sessions.js";
 import ReportsModel from "./Reports.js";
 
-const db = new Sequelize("Postgres://claudio96@localhost:5432/scsd");
+const db = new Sequelize(process.env.DATABASE_URL, {
+    dialect: "postgres",
+    dialectOptions: {
+        ssl: { require: true, rejectUnauthorized: false },
+    },
+    logging: false,
+});
 
 // const Students = StudentsModel(db);
 const Reports = ReportsModel(db);
@@ -31,3 +37,4 @@ const connectToDB = async () => {
 connectToDB();
 
 export { db, Reports };
+ 

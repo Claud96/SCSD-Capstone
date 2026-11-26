@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { db, Reports } from "./db/db.js";
@@ -165,6 +166,8 @@ server.delete("/reports/:id", async (req, res) => {
     res.send();
 });
 
-server.listen(3021, () => {
-    console.log("server running on port 3021");
+const PORT = process.env.PORT || 3021;
+
+server.listen(PORT, () => {
+    console.log(`server running on port ${PORT}`);
 });
