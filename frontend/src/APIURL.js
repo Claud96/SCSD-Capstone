@@ -1,3 +1,3 @@
-const APIURL = "http://localhost:3021";
+const APIURL = "https://scsd-capstone.onrender.com";
 
 export default APIURL;
