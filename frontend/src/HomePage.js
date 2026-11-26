@@ -26,13 +26,28 @@ const HomePage = () => {
             <hr />
             <div className="row">
                 {/* <div className="col-1"></div> */}
-                <div className="col-2">
+                   <div className="col-2">
                     {!user && (
-                        <Link to="/sign-in">
-                            <button> Sign In</button>
-                        </Link>
+                        <>
+                            <Link to="/sign-in">
+                                <button>Sign In</button>
+                            </Link>
+                            <Link to="/sign-up">
+                                <button>Sign Up</button>
+                            </Link>
+                        </>
                     )}
-                    {user && <SignOutButton />}
+                    {user && (
+                        <>
+                            <Link to="/student-dashboard">
+                                <button>Dashboard</button>
+                            </Link>
+                            <Link to="/submit-report">
+                                <button>Submit a Report</button>
+                            </Link>
+                            <SignOutButton />
+                        </>
+                    )}
                 </div>
                 <div className="col-10" id="mainContent">
                     <h3>Summer Reading Assignment</h3>
