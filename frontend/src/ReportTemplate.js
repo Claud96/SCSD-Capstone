@@ -73,7 +73,7 @@ const ReportTemplate = () => {
             <SignedIn>
                 <div id="navBar">
                     <img
-                        src="scsdLogo.png"
+                        src="/scsdLogo.png"
                         alt="syracuse city school district logo"
                     />
                 </div>
