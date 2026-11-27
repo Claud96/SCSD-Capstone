@@ -10,7 +10,7 @@ function FooterComponent() {
             <div className="row" id="footer" align="left">
                 <div className="col-5 col-m-5 footerHeaderSmall">
                     <u>
-                        <p> Anthony Q. Davis, Superintendent</p>
+                        <p> Pamela J. Odom, Superintendent</p>
                         <p> 725 Harrison Street</p>
                         <p> Syracuse, NY 13210</p>
                         <p>315.435.4499</p>
