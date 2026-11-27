@@ -31,12 +31,14 @@ function FooterComponent() {
                     <p>
                         <Link to="/submit-report">Submit Report</Link>
                     </p>
-                    <div className="col-2 col-m-2 center"> Designed and built by Alize Claudio · 2023 </div>
+                   
                 </div>
 
                 
 
-                <div className="col-3 col-m-3"></div>
+                <div className="col-3 col-m-3"> 
+                     <div className="col-2 col-m-2 center"> Designed and built by Alize Claudio · 2023 </div>
+                </div>
             </div>
         </SignedIn>
     );
