@@ -1,11 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const formatDate = (value) => {
+    if (!value) return null;
+    const date = new Date(value);
+    if (isNaN(date)) return null;
+    const day = date.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    });
+    const time = date.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+    });
+    return `${day} at ${time}`;
+};
+
 const ReportCard = ({ data }) => {
     if (!data) {
         return null;
     }
-    const review = data.review || "";
+    const submitted = formatDate(data.createdAt);
 
     return (
         <div className="col-12 col-md-6 col-lg-4 mb-4">
@@ -29,17 +45,18 @@ const ReportCard = ({ data }) => {
                         {data.title}
                     </h5>
                     {data.author && (
-                        <p style={{ color: "#6c757d", fontStyle: "italic", marginBottom: "0.75rem" }}>
+                        <p style={{ color: "#6c757d", fontStyle: "italic", marginBottom: "0.5rem" }}>
                             by {data.author}
                         </p>
                     )}
-                    <p className="card-text" style={{ flexGrow: 1 }}>
-                        {review.slice(0, 100)}
-                        {review.length > 100 ? "..." : ""}
-                    </p>
+                    {submitted && (
+                        <p style={{ color: "#6c757d", fontSize: "0.85rem", marginBottom: "1rem" }}>
+                            Submitted {submitted}
+                        </p>
+                    )}
                     <Link
                         to={`/student-dashboard/view-report/${data.id}`}
-                        className="btn"
+                        className="btn mt-auto"
                         style={{
                             backgroundColor: "#000000",
                             color: "#ffffff",
