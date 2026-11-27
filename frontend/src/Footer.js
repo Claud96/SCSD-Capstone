@@ -36,8 +36,18 @@ function FooterComponent() {
 
                 
 
-                <div className="col-3 col-m-3"> 
-                     <div className="col-2 col-m-2 center"> Designed and built by Alize Claudio · 2023 </div>
+                 <div
+                    style={{
+                        width: "100%",
+                        flexBasis: "100%",
+                        textAlign: "center",
+                        fontSize: "0.9rem",
+                        paddingTop: "1rem",
+                        marginTop: "1rem",
+                        borderTop: "1px solid rgba(255, 255, 255, 0.3)",
+                    }}
+                >
+                    Designed and built by Alize Claudio · 2023
                 </div>
             </div>
         </SignedIn>
