@@ -3,29 +3,51 @@ import { Link } from "react-router-dom";
 
 const ReportCard = ({ data }) => {
     if (!data) {
-        return null; // or handle the case when data or data.review is null or undefined
+        return null;
     }
-    if (!data.review) {
-        data.review = "";
-    }
+    const review = data.review || "";
+
     return (
-        <div className="col-4">
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">{data.title}</h5>
-                    <div className="card-text">
-                        <div className="author">{data.author}</div>
-                        <p>
-                            {data.review.slice(0, 100)}
-                            {data.review.length > 100 ? "..." : ""}
+        <div className="col-12 col-md-6 col-lg-4 mb-4">
+            <div
+                className="card h-100"
+                style={{
+                    borderRadius: "12px",
+                    border: "none",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+                }}
+            >
+                <div
+                    style={{
+                        height: "6px",
+                        background: "linear-gradient(90deg, #d33e3c, #f1be37)",
+                    }}
+                />
+                <div className="card-body d-flex flex-column">
+                    <h5 className="card-title" style={{ color: "#000000", fontWeight: 600 }}>
+                        {data.title}
+                    </h5>
+                    {data.author && (
+                        <p style={{ color: "#6c757d", fontStyle: "italic", marginBottom: "0.75rem" }}>
+                            by {data.author}
                         </p>
-                    </div>
-                    {/* Use the id as a param in the route */}
+                    )}
+                    <p className="card-text" style={{ flexGrow: 1 }}>
+                        {review.slice(0, 100)}
+                        {review.length > 100 ? "..." : ""}
+                    </p>
                     <Link
                         to={`/student-dashboard/view-report/${data.id}`}
-                        className="btn btn-primary"
+                        className="btn"
+                        style={{
+                            backgroundColor: "#000000",
+                            color: "#ffffff",
+                            borderRadius: "8px",
+                            alignSelf: "flex-start",
+                        }}
                     >
-                        VIew More
+                        View More
                     </Link>
                 </div>
             </div>
